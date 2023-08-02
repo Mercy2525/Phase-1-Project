@@ -1,0 +1,102 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "title": "T-Shirt",
+        "price": 700,
+        "image": "https://images.pexels.com/photos/1566412/pexels-photo-1566412.jpeg?auto=compress&cs=tinysrgb&w=300",
+        "description": "A comfortable and stylish cotton t-shirt for everyday wear."
+      },
+      {
+        "id": 2,
+        "title": "Jeans",
+        "price": 600,
+        "image": "https://images.pexels.com/photos/2363825/pexels-photo-2363825.jpeg?auto=compress&cs=tinysrgb&w=300",
+        "description": "Classic blue jeans that fit perfectly and provide great comfort."
+      },
+      {
+        "id": 3,
+        "title": "Dress",
+        "price": 2000,
+        "image": "https://images.pexels.com/photos/5447905/pexels-photo-5447905.jpeg?auto=compress&cs=tinysrgb&w=300",
+        "description": "Elegant and fashionable dress for special occasions."
+      },
+      {
+        "id": 4,
+        "title": "Coat",
+        "price": 1500,
+        "image": "https://images.pexels.com/photos/17697857/pexels-photo-17697857/free-photo-of-elegant-woman-using-phone.jpeg?auto=compress&cs=tinysrgb&w=300",
+        "description": "Stylish and warm jacket for cold weather."
+      },
+      {
+        "id": 5,
+        "title": "Sweater",
+        "price": 1000,
+        "image": "https://images.pexels.com/photos/2705753/pexels-photo-2705753.jpeg?auto=compress&cs=tinysrgb&w=300",
+        "description": "Soft and cozy sweater to keep you warm during winters."
+      },
+      {
+        "id": 6,
+        "title": "Skirt",
+        "price": 1000,
+        "image": "https://images.pexels.com/photos/4663319/pexels-photo-4663319.jpeg?auto=compress&cs=tinysrgb&w=300",
+        "description": "Trendy and comfortable skirt for a chic look."
+      },
+      {
+        "id": 7,
+        "title": "Blouse",
+        "price": 600,
+        "image": "https://images.pexels.com/photos/5276441/pexels-photo-5276441.jpeg?auto=compress&cs=tinysrgb&w=300",
+        "description": "Light and stylish blouse for a casual or formal look."
+      },
+      {
+        "id": 8,
+        "title": "Shorts",
+        "price": 400,
+        "image": "https://images.pexels.com/photos/5693888/pexels-photo-5693888.jpeg?auto=compress&cs=tinysrgb&w=300",
+        "description": "Casual shorts perfect for summer outings."
+      },
+      {
+        "id": 9,
+        "title": "Sweatshirt",
+        "price": 400,
+        "image": "https://images.pexels.com/photos/6311662/pexels-photo-6311662.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "description": "Cozy sweatshirt for a comfortable and relaxed look."
+      },
+      {
+        "id": 10,
+        "title": "Blazer",
+        "price": 1000,
+        "image": "https://images.pexels.com/photos/9218538/pexels-photo-9218538.jpeg?auto=compress&cs=tinysrgb&w=300",
+        "description": "Classy blazer for a polished and professional appearance."
+      },
+      {
+        "id": 11,
+        "title": "Pants",
+        "price": 1200,
+        "image": "https://images.pexels.com/photos/10415854/pexels-photo-10415854.jpeg?auto=compress&cs=tinysrgb&w=300",
+        "description": "Versatile and stylish pants suitable for various occasions."
+      },
+      {
+        "id": 12,
+        "title": "Hoodie",
+        "price": 1500,
+        "image": "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=300",
+        "description": "Warm and trendy hoodie for a sporty and casual look."
+      },
+      {
+        "id": 13,
+        "title": "Sun dress",
+        "price": 1300,
+        "image": "https://images.pexels.com/photos/5442578/pexels-photo-5442578.jpeg?auto=compress&cs=tinysrgb&w=300",
+        "description": "Cool and comfortable sun dress for hot days."
+      },
+      {
+        "id": 14,
+        "title": "Dress Shirt",
+        "price": 800,
+        "image": "https://images.pexels.com/photos/7382480/pexels-photo-7382480.jpeg?auto=compress&cs=tinysrgb&w=300",
+        "description": "Elegant dress shirt for formal events and business meetings."
+      }
+    ]
+  }
