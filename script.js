@@ -2,9 +2,9 @@
 document.addEventListener("DOMContentLoaded", ()=>{
     //get elements from HTML
     let dataList= document.getElementById("datalistOptions")
-    let card=document.querySelector(".card")
     let productImages= document.getElementById("all-images")  
     let searchInput=document.querySelector("#search")
+    let form= document.getElementById("form")
     
     //Get from API
   fetch("http://localhost:3000/products")
@@ -16,14 +16,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
   function displayProducts(products){
     for( let product of products){
-      const{id,title,price,image,description}=product
-       //display first image
-        // if (id == 1) {
-        //   let firstImg=document.createElement("p")
-        //   firstImg.innerHTML= `<img src="${image}">`
-        //   card.appendChild(firstImg)
-        // }
-
+      const{id,title,price,image,description,stock}=product
         //search option
         let searchOption=document.createElement("option")
         searchOption.class="me"
@@ -41,7 +34,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
             <div class="card-body">
               <h5 class="card-title">${title}</h5>
               <p class="card-text">Ksh: ${price}</p>
+              <p class="card-text"> ${stock} pieces left</p>
               <p class="card-text">${description}</p>
+              <button id="buyButton">Buy</button>
 
              </div>
             </div>`
@@ -59,24 +54,48 @@ document.addEventListener("DOMContentLoaded", ()=>{
             card.style.display = "none";
           }
         }  
-        
-
          })
     }
- 
+
+  //Add more products
+    //1.Submit Event listner to post more Products
+    form.addEventListener("submit", function(e){
+       e.preventDefault()
+        postProducts()
+        form.reset()
+})
+
+  //2. Function to add more products
+  function postProducts(){
+    let newImage=document.getElementById("pic").value
+    let newTitle= document.getElementById("title").value
+    let otherPrice=document.getElementById("price").value
+    let newStock= document.getElementById("stock").value
+    let description=document.getElementById("describe").value
+
+    fetch("http://localhost:3000/products", {
+        method: "POST",
+        headers:{"Content-Type": "application/json"},
+        body:JSON.stringify({
+            title:newTitle,
+            price:otherPrice,
+            stock:newStock,
+            image:newImage,
+            description:description
+        })
+    })
+    .then(response=>response.json())
+    .then(data=>console.log(data))
+    .catch(error=>alert(error))
+  } 
 })
 
 
 //Name, Shop IG, taglines- shopping made easier
-//sellers can post new items(below the page)
-//delete sold items/reduce the number of items available
-//add a search bar so users can search for the specific products they want. 
+//delete sold items/reduce the number of items available 
 //Also, add some form of filtering functionality, either by category or date added. 
 
-// FIRST: Get a db.json file or create one- create 20 items(Done)
-//1. Shop-Header-Create a search bar,(form,input) and filtering functionality-shoes/clothes(firstDiv in HTML)
+//1. Shop-Header-Create a filtering functionality-shoes/clothes(firstDiv in HTML)
 //2. Get request api, and post on DOM
-    //clothes/1- just for display not sale-get and append
-    //Display all goods, to include, title, cost, size, 
     //no of items in stock(maybe)-[secondDiv in HTML]
     //create Div to attach
