@@ -2,10 +2,10 @@
     "products": [
       {
         "id": 1,
-        "title": "T-Shirt",
+        "title": "Denim-Coat",
         "price": 700,
-        "image": "https://images.pexels.com/photos/1566412/pexels-photo-1566412.jpeg?auto=compress&cs=tinysrgb&w=300",
-        "description": "A comfortable and stylish cotton t-shirt for everyday wear."
+        "image": "https://images.pexels.com/photos/1038343/pexels-photo-1038343.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "description": "A comfortable and stylish Denim-Coat for everyday wear."
       },
       {
         "id": 2,
@@ -93,10 +93,10 @@
       },
       {
         "id": 14,
-        "title": "Dress Shirt",
+        "title": "Winter Coat",
         "price": 800,
-        "image": "https://images.pexels.com/photos/7382480/pexels-photo-7382480.jpeg?auto=compress&cs=tinysrgb&w=300",
-        "description": "Elegant dress shirt for formal events and business meetings."
+        "image": "https://images.pexels.com/photos/1381556/pexels-photo-1381556.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "description": "Sassy Coat for Winter for formal events and business meetings."
       }
     ]
   }
