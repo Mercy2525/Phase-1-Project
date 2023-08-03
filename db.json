@@ -13,7 +13,7 @@
       "price": "500",
       "stock": 6,
       "image": "https://images.pexels.com/photos/9558761/pexels-photo-9558761.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      "description": "Fancy Formal Trouser for great occasions",
+      "description": "A comfortable and stylish cotton t-shirt for everyday wear",
       "id": 2
     },
     {
@@ -28,17 +28,17 @@
       "title": "Jacket",
       "price": 2000,
       "stock": 3,
-      "image": "https://media.istockphoto.com/id/163208487/photo/male-coat-isolated-on-the-white.jpg?b=1&s=612x612&w=0&k=20&c=VHq7Kl0jekLwjdYFCPTiS51kVuRfHmBQddW545iRZ1E=",
+      "image": "https://images.pexels.com/photos/10871547/pexels-photo-10871547.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "description": "Stylish and warm jacket for cold weather.",
       "id": 4
     },
     {
       "title": "Sweater",
       "price": 1000,
-      "stock": 0,
+      "stock": 4,
       "image": "https://images.pexels.com/photos/7576390/pexels-photo-7576390.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "description": "Soft and cozy sweater to keep you warm during winters.",
-      "id": "5"
+      "id": 5
     },
     {
       "title": "Skirt",
@@ -46,79 +46,79 @@
       "stock": 6,
       "image": "https://images.pexels.com/photos/4663319/pexels-photo-4663319.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "description": "Trendy and comfortable skirt for a chic look.",
-      "id": "6"
+      "id": 6
     },
     {
-      "id": "7",
+      
       "title": "Blouse",
-      "price": 24.99,
-      "stock": 0,
-      "image": "https://example.com/images/blouse.jpg",
-      "description": "Light and stylish blouse for a casual or formal look."
+      "price": 600,
+      "stock": 7,
+      "image": "https://images.pexels.com/photos/5276441/pexels-photo-5276441.jpeg?auto=compress&cs=tinysrgb&w=300",
+      "description": "Light and stylish blouse for a casual or formal look.",
+      "id": 7
     },
     {
-      "id": "8",
+      
       "title": "Shorts",
-      "price": 17.99,
-      "stock": 0,
-      "image": "https://example.com/images/shorts.jpg",
-      "description": "Casual shorts perfect for summer outings."
+      "price": 700,
+      "stock": 4,
+      "image": "https://images.pexels.com/photos/5693888/pexels-photo-5693888.jpeg?auto=compress&cs=tinysrgb&w=300",
+      "description": "Casual shorts perfect for summer outings.",
+      "id": 8
     },
     {
-      "id": "9",
+      
       "title": "Sweatshirt",
-      "price": 44.99,
-      "stock": 0,
-      "image": "https://example.com/images/sweatshirt.jpg",
-      "description": "Cozy sweatshirt for a comfortable and relaxed look."
+      "price": 700,
+      "stock": 6,
+      "image": "https://images.pexels.com/photos/6311662/pexels-photo-6311662.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "description": "Cozy sweatshirt for a comfortable and relaxed look.",
+      "id": 9
     },
     {
-      "id": "10",
+     
       "title": "Blazer",
-      "price": 54.99,
-      "stock": 0,
-      "image": "https://example.com/images/blazer.jpg",
-      "description": "Classy blazer for a polished and professional appearance."
+      "price": 1300,
+      "stock": 6,
+      "image": "https://images.pexels.com/photos/9218538/pexels-photo-9218538.jpeg?auto=compress&cs=tinysrgb&w=300",
+      "description": "Classy blazer for a polished and professional appearance.",
+      "id": "10"
     },
     {
-      "id": "11",
+     
       "title": "Pants",
-      "price": 32.99,
+      "price": 1200,
       "stock": 0,
-      "image": "https://example.com/images/pants.jpg",
-      "description": "Versatile and stylish pants suitable for various occasions."
+      "image": "https://images.pexels.com/photos/10415854/pexels-photo-10415854.jpeg?auto=compress&cs=tinysrgb&w=300",
+      "description": "Versatile and stylish pants suitable for various occasions.",
+      "id": 11
     },
     {
-      "id": 12,
+    
       "title": "Hoodie",
       "price": 1500,
-      "stock": 0,
+      "stock": 3,
       "image": "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "description": "Warm and trendy hoodie for a sporty and casual look."
+      "description": "Warm and trendy hoodie for a sporty and casual look.",
+      "id": 12
     },
     {
-      "id": "13",
-      "title": "Tank Top",
-      "price": 14.99,
-      "stock": 0,
-      "image": "https://example.com/images/tanktop.jpg",
-      "description": "Cool and comfortable tank top for hot days."
+      
+      "title": "Denim-Coat",
+      "price": 600,
+      "stock": 6,
+      "image": "https://images.pexels.com/photos/1038343/pexels-photo-1038343.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "description": "A comfortable and stylish Denim-Coat for everyday wear.",
+      "id": 13
     },
     {
-      "id": "14",
-      "title": "Dress Shirt",
-      "price": 39.99,
-      "stock": 0,
-      "image": "https://example.com/images/dressshirt.jpg",
-      "description": "Elegant dress shirt for formal events and business meetings."
-    },
-    {
-      "title": "UJUU",
-      "price": "66",
-      "stock": "6",
-      "image": "https://images.pexels.com/photos/952214/pexels-photo-952214.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      "description": "DFG",
-      "id": "ezWfiQr"
+      
+      "title": "Sun-dress",
+      "price": 1600,
+      "stock": 8,
+      "image": "https://images.pexels.com/photos/5442578/pexels-photo-5442578.jpeg?auto=compress&cs=tinysrgb&w=300",
+      "description": "Elegant dress shirt for formal events and business meetings.",
+      "id": 14
     }
   ]
 }
