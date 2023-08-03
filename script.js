@@ -1,10 +1,10 @@
 //Ensures DOM has loaded
 document.addEventListener("DOMContentLoaded", ()=>{
     //get elements from HTML
-    let dataList= document.getElementById("datalistOptions")
-    let productImages= document.getElementById("all-images")  
-    let searchInput=document.querySelector("#search")
-    let form= document.getElementById("form")
+  let dataList= document.getElementById("datalistOptions")
+  let productImages= document.getElementById("all-images")  
+  let searchInput=document.querySelector("#search")
+  let form= document.getElementById("form")
     
     //GET from API
   fetch("http://localhost:3000/products")
@@ -12,11 +12,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
     .then(data=>displayProducts(data))
     .catch(error=>console.log(error))
     
-  //function to display product details
+    //function to display product details
   function displayProducts(products){
     for( let product of products){
       const{id,title,price,image,description,stock}=product
-        //search option-display product titles
+        //search option- display product titles
         let searchOption=document.createElement("option")
         searchOption.innerHTML=`
         <option value="${title}"> 
@@ -34,10 +34,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
               <p id="boughtStocks" class="card-text"><span id="boughtStock${id}">${stock}</span> items left</p>
               <p class="card-text">${description}</p>
               <button id='buyButton${id}'>Buy</button>
+              <button id=deleteProduct${id}>Remove</button>
              </div>
             </div>`
         productImages.appendChild(allImages)
 
+        //Add click Event listner to buy button
         let buyButton=allImages.querySelector(`#buyButton${id}`)
         buyButton.addEventListener("click", ()=>{
          let updateStock=document.querySelector(`#boughtStock${id}`)
@@ -49,6 +51,17 @@ document.addEventListener("DOMContentLoaded", ()=>{
           updateBoughtStock(id, currentStock)
        })
 
+        //Add click Event listner to buy button
+        let deleteButton=allImages.querySelector(`#deleteProduct${id}`)
+        deleteButton.addEventListener("click", ()=>{
+         let updateStock=document.querySelector(`#boughtStock${id}`)
+         let currentStock=parseInt(updateStock.textContent)
+          if (currentStock===0) {
+            
+          }
+          allImages.textContent= ``
+          deleteItem(id, currentStock)
+       })
        }
 
        //add click Event-listener on search list
@@ -65,13 +78,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
         }  
          })
 
-//Add more products
-    //1.Submit Event listener to post more Products
-    form.addEventListener("submit", function(e){
+   //Add more products
+     //1.Submit Event listener to post more Products
+  form.addEventListener("submit", function(e){
        e.preventDefault()
         postProducts()
         form.reset()
-})
+    })
 
   //2. Function to add more products...POST Method
   function postProducts(){
@@ -98,23 +111,31 @@ document.addEventListener("DOMContentLoaded", ()=>{
   } 
 }
 
-//PATCH method to update bought items
-function updateBoughtStock(id, currentStock){
-   
-  fetch(`http://localhost:3000/products/${id}`,{
-    method: "PATCH",
-    headers: {"Content-Type": "application/json"},
-    body:JSON.stringify({
+    //PATCH method to update bought items
+ function updateBoughtStock(id, currentStock){
+     fetch(`http://localhost:3000/products/${id}`,{
+      method: "PATCH",
+      headers: {"Content-Type": "application/json"},
+      body:JSON.stringify({
       stock: currentStock,
+      })
     })
-  })
     .then(response=>response.json())
     .then(data=>console.log(data))
     .catch(error=>console.log(error))
-
 }
-    
 
+function deleteItem(id, currentStock){  
+    fetch(`http://localhost:3000/products/${id}`,{
+      method: "DELETE",
+      headers: {"Content-Type": "application/json"},
+    })
+    .then(response=>response.json())
+    .then(data=>console.log(data))
+    .catch(error=>console.log(error))
+}
+
+  
 })
 
 // function deleteProduct(id){fetch (${apiUrl}/${id}.......)

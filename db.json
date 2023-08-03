@@ -12,7 +12,7 @@
       "id": 2,
       "title": "Jeans",
       "price": 600,
-      "stock": 5,
+      "stock": 0,
       "image": "https://images.pexels.com/photos/2363825/pexels-photo-2363825.jpeg?auto=compress&cs=tinysrgb&w=300",
       "description": "Classic blue jeans that fit perfectly and provide great comfort."
     },
@@ -112,7 +112,5 @@
       "image": "https://images.pexels.com/photos/1381556/pexels-photo-1381556.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "description": "Sassy Coat for Winter for formal events and business meetings."
     }
-    
-    
   ]
 }
