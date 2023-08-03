@@ -28,10 +28,12 @@ body{
 header{
     background-color: rgb(246, 199, 112);
     grid-area: header;
+    border-radius: 15px;
 }
 nav{
-    background-color: orange;
+    background-color:rgb(246, 199, 112);
     grid-area: nav;
+    border-radius: 20px;
 }
 nav ul{
     
@@ -42,7 +44,8 @@ nav ul{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;   
+    justify-content: center; 
+    border-radius: 20px;  
     
 }
 #main-card img{
@@ -55,8 +58,9 @@ nav ul{
     
 }
 #aboutUs{
-    background-color: orange;
+    background-color: rgb(228, 202, 153);
     grid-area: aboutUs;
+    border-radius: 20px;
 }
 #all-images{
     background-color:rgb(244, 215, 162);
@@ -66,6 +70,7 @@ nav ul{
     flex-wrap: wrap;   
     align-items: center;
     justify-content: center;
+    border-radius: 20px;
      
 }
 
@@ -89,6 +94,7 @@ nav ul{
 #form{
     background-color: rgb(251, 218, 158);
     grid-area: form;
+    border-radius: 20px;
     
 }
 .card img{
@@ -98,13 +104,22 @@ nav ul{
 }
 
 #footer{
-    background-color:rgb(232, 211, 171);
+    background-color:rgb(246, 199, 112);
     grid-area: footer;
+    border-radius: 20px;
 }
 
 @media only screen and(max-width:550px) {
     .container{
         grid-template-columns: 1fr;
-        grid-template-rows: ;
+        grid-template-rows: 0.2fr 0.2fr 0.4fr 1.2fr 1fr 0.8fro.2fr;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main-card"
+        "all-images"
+        "form"
+        "aboutUs"
+        "footer";
     }
 }
