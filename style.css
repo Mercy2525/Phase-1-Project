@@ -10,7 +10,7 @@
     "all-images all-images all-images all-images"
     "form form form form"
     "footer footer footer footer";
-    grid-gap: 0.2rem;
+    grid-gap: 0.4rem;
 
 }
 
@@ -38,7 +38,6 @@ header{
     height: 650px;
     width: 550px;
     padding: 20px;
-    
     border-radius: 60px;
     
 }
@@ -49,23 +48,31 @@ header{
     flex-direction: row;
     flex-wrap: wrap;   
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
+     
 }
 
 #all-images .card{
     margin: 10px;
     padding: 5px;
     width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 #all-images .card img{
-    height: 430px;
-    width: 350px;
+    height: 400px;
+    width: 320px;
+    border-radius: 20px;
+    
 }
 
 #form{
-    background-color: rgb(235, 221, 193);
+    background-color: rgb(251, 218, 158);
     grid-area: form;
+    
 }
 .card img{
     object-fit: fill;
@@ -74,7 +81,7 @@ header{
 }
 
 #footer{
-    background-color: rgb(177, 233, 72);
+    background-color:rgb(232, 211, 171);
     grid-area: footer;
 }
 

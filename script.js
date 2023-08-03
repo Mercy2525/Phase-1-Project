@@ -69,9 +69,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
           // allImages.textContent= ``
           // deleteItem(id, currentStock)
        })
-       }
+    }
 
-       //add click Event-listener on search list
+       //add Input event-listener on search list
        searchInput.addEventListener("input", () => {
         let searchTerm = searchInput.value.toLowerCase();
         let cards = document.querySelectorAll(".card");
