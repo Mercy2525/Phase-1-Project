@@ -6,42 +6,51 @@ document.addEventListener("DOMContentLoaded", ()=>{
     let searchInput=document.querySelector("#search")
     let form= document.getElementById("form")
     
-    //Get from API
+    //GET from API
   fetch("http://localhost:3000/products")
     .then(res=>res.json())
     .then(data=>displayProducts(data))
     .catch(error=>console.log(error))
     
   //function to display product details
-
   function displayProducts(products){
     for( let product of products){
       const{id,title,price,image,description,stock}=product
-        //search option
+        //search option-display product titles
         let searchOption=document.createElement("option")
-        searchOption.class="me"
         searchOption.innerHTML=`
         <option value="${title}"> 
         `
         dataList.appendChild(searchOption)
-
+      
         // display images and their details
         let allImages=document.createElement("div")
-    
         allImages.innerHTML=`
          <div class="card">
           <img class="card-img-top" src="${image}" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">${title}</h5>
               <p class="card-text">Ksh: ${price}</p>
-              <p class="card-text"> ${stock} pieces left</p>
+              <p id="boughtStocks" class="card-text"><span id="boughtStock${id}">${stock}</span> items left</p>
               <p class="card-text">${description}</p>
-              <button id="buyButton">Buy</button>
-
+              <button id='buyButton${id}'>Buy</button>
              </div>
             </div>`
         productImages.appendChild(allImages)
+
+        let buyButton=allImages.querySelector(`#buyButton${id}`)
+        buyButton.addEventListener("click", ()=>{
+         let updateStock=document.querySelector(`#boughtStock${id}`)
+         let currentStock=parseInt(updateStock.textContent)
+          if (currentStock>0) {
+            currentStock = parseInt(currentStock)-1
+          }
+          updateStock.textContent= `${currentStock}`
+          updateBoughtStock(id, currentStock)
+       })
+
        }
+
        //add click Event-listener on search list
        searchInput.addEventListener("input", () => {
         let searchTerm = searchInput.value.toLowerCase();
@@ -55,17 +64,16 @@ document.addEventListener("DOMContentLoaded", ()=>{
           }
         }  
          })
-    }
 
-  //Add more products
-    //1.Submit Event listner to post more Products
+//Add more products
+    //1.Submit Event listener to post more Products
     form.addEventListener("submit", function(e){
        e.preventDefault()
         postProducts()
         form.reset()
 })
 
-  //2. Function to add more products
+  //2. Function to add more products...POST Method
   function postProducts(){
     let newImage=document.getElementById("pic").value
     let newTitle= document.getElementById("title").value
@@ -86,11 +94,31 @@ document.addEventListener("DOMContentLoaded", ()=>{
     })
     .then(response=>response.json())
     .then(data=>console.log(data))
-    .catch(error=>alert(error))
+    .catch(error=>console.log(error))
   } 
+}
+
+//PATCH method to update bought items
+function updateBoughtStock(id, currentStock){
+   
+  fetch(`http://localhost:3000/products/${id}`,{
+    method: "PATCH",
+    headers: {"Content-Type": "application/json"},
+    body:JSON.stringify({
+      stock: currentStock,
+    })
+  })
+    .then(response=>response.json())
+    .then(data=>console.log(data))
+    .catch(error=>console.log(error))
+
+}
+    
+
 })
 
-
+// function deleteProduct(id){fetch (${apiUrl}/${id}.......)
+// button.addEventListener("click", ()=>{deleteProduct(id)})
 //Name, Shop IG, taglines- shopping made easier
 //delete sold items/reduce the number of items available 
 //Also, add some form of filtering functionality, either by category or date added. 

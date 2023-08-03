@@ -4,7 +4,7 @@
       "id": 1,
       "title": "Denim-Coat",
       "price": 700,
-      "stock": 8,
+      "stock": 7,
       "image": "https://images.pexels.com/photos/1038343/pexels-photo-1038343.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "description": "A comfortable and stylish Denim-Coat for everyday wear."
     },
@@ -12,7 +12,7 @@
       "id": 2,
       "title": "Jeans",
       "price": 600,
-      "stock": 6,
+      "stock": 5,
       "image": "https://images.pexels.com/photos/2363825/pexels-photo-2363825.jpeg?auto=compress&cs=tinysrgb&w=300",
       "description": "Classic blue jeans that fit perfectly and provide great comfort."
     },
@@ -111,14 +111,8 @@
       "stock": 5,
       "image": "https://images.pexels.com/photos/1381556/pexels-photo-1381556.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "description": "Sassy Coat for Winter for formal events and business meetings."
-    },
-    {
-      "title": "sasa",
-      "price": "400",
-      "stock": "1",
-      "image": "https://images.pexels.com/photos/952214/pexels-photo-952214.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      "description": "Fancy Formal Trouser for great occasions",
-      "id": 15
     }
+    
+    
   ]
 }
