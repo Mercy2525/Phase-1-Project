@@ -3,14 +3,21 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 0.8fr 1.5fr 0.8fr;
+    grid-template-rows: 0.2fr 0.2fr 0.8fr 1.5fr 0.5fr 0.3fr 0.3fr;
     grid-template-areas: 
-    "header header header header"
+    " header header header header"
     "main-card main-card main-card main-card"
+    "nav nav nav nav"
+    "aboutUs aboutUs aboutUs aboutUs"
     "all-images all-images all-images all-images"
     "form form form form"
     "footer footer footer footer";
-    grid-gap: 0.4rem;
+    grid-gap: 2em;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: black;
+    text-align: center;
+     
 
 }
 
@@ -22,14 +29,20 @@ header{
     background-color: rgb(246, 199, 112);
     grid-area: header;
 }
+nav{
+    background-color: orange;
+    grid-area: nav;
+}
+nav ul{
+    
+}
 #main-card{
     background-color:rgb(205, 181, 136);
     grid-area: main-card;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center;   
     
 }
 #main-card img{
@@ -40,6 +53,10 @@ header{
     padding: 20px;
     border-radius: 60px;
     
+}
+#aboutUs{
+    background-color: orange;
+    grid-area: aboutUs;
 }
 #all-images{
     background-color:rgb(244, 215, 162);
