@@ -1,12 +1,55 @@
 .container{
-    height: 100%;
-    width:  100%;
+    background-color: rgb(236, 235, 233);
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.8fr 1.5fr 0.8fr;
+    grid-template-areas: 
+    "header header header header"
+    "main-card main-card main-card main-card"
+    "all-images all-images all-images all-images"
+    "form form form form"
+    "footer footer footer footer";
+    grid-gap: 0.2rem;
+
 }
 
-#all-images{
+body{
+    background-color: rgb(215, 209, 196);
+}
+
+header{
+    background-color: rgb(246, 199, 112);
+    grid-area: header;
+}
+#main-card{
+    background-color:rgb(205, 181, 136);
+    grid-area: main-card;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+#main-card img{
+    align-items: center;
+    display: block;
+    height: 650px;
+    width: 550px;
+    padding: 20px;
+    
+    border-radius: 60px;
+    
+}
+#all-images{
+    background-color:rgb(244, 215, 162);
+    grid-area: all-images;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;   
+    align-items: center;
+    justify-content: center; 
 }
 
 #all-images .card{
@@ -18,9 +61,26 @@
 #all-images .card img{
     height: 430px;
     width: 350px;
-    }
+}
+
+#form{
+    background-color: rgb(235, 221, 193);
+    grid-area: form;
+}
 .card img{
     object-fit: fill;
-    height: 80%;
-    width: 100%;
+    height: 20%;
+    width: 50%;
+}
+
+#footer{
+    background-color: rgb(177, 233, 72);
+    grid-area: footer;
+}
+
+@media only screen and(max-width:550px) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: ;
+    }
 }

@@ -39,28 +39,35 @@ document.addEventListener("DOMContentLoaded", ()=>{
             </div>`
         productImages.appendChild(allImages)
 
-        //Add click Event listner to buy button
+        //Add click Event listener to buy button
         let buyButton=allImages.querySelector(`#buyButton${id}`)
         buyButton.addEventListener("click", ()=>{
          let updateStock=document.querySelector(`#boughtStock${id}`)
          let currentStock=parseInt(updateStock.textContent)
           if (currentStock>0) {
+            
             currentStock = parseInt(currentStock)-1
           }
           updateStock.textContent= `${currentStock}`
           updateBoughtStock(id, currentStock)
+
+          if (currentStock === 0) {
+            buyButton.setAttribute("disabled", true);
+            buyButton.textContent = "Sold Out";
+          }
        })
 
-        //Add click Event listner to buy button
+        //Add click Event listener to delete button
         let deleteButton=allImages.querySelector(`#deleteProduct${id}`)
         deleteButton.addEventListener("click", ()=>{
          let updateStock=document.querySelector(`#boughtStock${id}`)
          let currentStock=parseInt(updateStock.textContent)
-          if (currentStock===0) {
-            
-          }
-          allImages.textContent= ``
+          if (currentStock === 0) {
+            allImages.textContent= ``
           deleteItem(id, currentStock)
+          }
+          // allImages.textContent= ``
+          // deleteItem(id, currentStock)
        })
        }
 
@@ -118,7 +125,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
       headers: {"Content-Type": "application/json"},
       body:JSON.stringify({
       stock: currentStock,
-      })
+      }),
     })
     .then(response=>response.json())
     .then(data=>console.log(data))
