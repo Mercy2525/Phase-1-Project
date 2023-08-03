@@ -17,7 +17,7 @@
       "id": 2
     },
     {
-      "product": "Dress",
+      "title": "Dress",
       "price": 1600,
       "stock": 9,
       "image": "https://images.pexels.com/photos/15751086/pexels-photo-15751086/free-photo-of-model-in-a-blue-dress.jpeg?auto=compress&cs=tinysrgb&w=1600",
@@ -25,7 +25,7 @@
       "id": 3
     },
     {
-      "product": "Jacket",
+      "title": "Jacket",
       "price": 2000,
       "stock": 3,
       "image": "https://media.istockphoto.com/id/163208487/photo/male-coat-isolated-on-the-white.jpg?b=1&s=612x612&w=0&k=20&c=VHq7Kl0jekLwjdYFCPTiS51kVuRfHmBQddW545iRZ1E=",
@@ -33,15 +33,15 @@
       "id": 4
     },
     {
-      "product": "Sweater",
-      "price": 39.99,
+      "title": "Sweater",
+      "price": 1000,
       "stock": 0,
-      "image": "https://example.com/images/sweater.jpg",
+      "image": "https://images.pexels.com/photos/7576390/pexels-photo-7576390.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "description": "Soft and cozy sweater to keep you warm during winters.",
       "id": "5"
     },
-    { 
-      "product": "Skirt",
+    {
+      "title": "Skirt",
       "price": 800,
       "stock": 6,
       "image": "https://images.pexels.com/photos/4663319/pexels-photo-4663319.jpeg?auto=compress&cs=tinysrgb&w=1600",
@@ -50,7 +50,7 @@
     },
     {
       "id": "7",
-      "product": "Blouse",
+      "title": "Blouse",
       "price": 24.99,
       "stock": 0,
       "image": "https://example.com/images/blouse.jpg",
@@ -58,7 +58,7 @@
     },
     {
       "id": "8",
-      "product": "Shorts",
+      "title": "Shorts",
       "price": 17.99,
       "stock": 0,
       "image": "https://example.com/images/shorts.jpg",
@@ -66,7 +66,7 @@
     },
     {
       "id": "9",
-      "product": "Sweatshirt",
+      "title": "Sweatshirt",
       "price": 44.99,
       "stock": 0,
       "image": "https://example.com/images/sweatshirt.jpg",
@@ -74,7 +74,7 @@
     },
     {
       "id": "10",
-      "product": "Blazer",
+      "title": "Blazer",
       "price": 54.99,
       "stock": 0,
       "image": "https://example.com/images/blazer.jpg",
@@ -82,7 +82,7 @@
     },
     {
       "id": "11",
-      "product": "Pants",
+      "title": "Pants",
       "price": 32.99,
       "stock": 0,
       "image": "https://example.com/images/pants.jpg",
@@ -90,7 +90,7 @@
     },
     {
       "id": 12,
-      "product": "Hoodie",
+      "title": "Hoodie",
       "price": 1500,
       "stock": 0,
       "image": "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=400",
@@ -98,7 +98,7 @@
     },
     {
       "id": "13",
-      "product": "Tank Top",
+      "title": "Tank Top",
       "price": 14.99,
       "stock": 0,
       "image": "https://example.com/images/tanktop.jpg",
@@ -106,11 +106,19 @@
     },
     {
       "id": "14",
-      "product": "Dress Shirt",
+      "title": "Dress Shirt",
       "price": 39.99,
       "stock": 0,
       "image": "https://example.com/images/dressshirt.jpg",
       "description": "Elegant dress shirt for formal events and business meetings."
+    },
+    {
+      "title": "UJUU",
+      "price": "66",
+      "stock": "6",
+      "image": "https://images.pexels.com/photos/952214/pexels-photo-952214.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "description": "DFG",
+      "id": "ezWfiQr"
     }
   ]
 }
