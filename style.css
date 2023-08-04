@@ -4,7 +4,7 @@
     padding: 0;
 }
 body{
-    background-color: rgb(215, 209, 196);
+    background-color: rgb(238, 224, 195);
     font-family: Arial, sans-serif;
 }
 .container{
@@ -12,7 +12,7 @@ body{
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 0.2fr 0.8fr 1.5fr 0.5fr 0.3fr 0.3fr;
+    grid-template-rows: 0.3fr 0.2fr 0.8fr 1.5fr 0.5fr 0.3fr 0.3fr;
     grid-template-areas: 
     "nav nav nav nav"
     "header header header header"
@@ -29,16 +29,22 @@ body{
 }
 
 nav a {
-    color: white;
+    color:rgb(31, 3, 31);
     text-decoration: none;
     padding: 10px;
 }
 
+nav a:hover{
+    color: blueviolet ;
+}
 
 header{
     background-color: rgb(246, 199, 112);
     grid-area: header;
     border-radius: 15px;
+}
+header h1{
+    font-family: 'Ysabeau Office', sans-serif;  
 }
 nav{
     background-color:rgb(246, 199, 112);
@@ -46,6 +52,7 @@ nav{
     border-radius: 20px;
     display: flex;
     justify-content: center;
+    padding: 20px;
 }
 
 #main-card{
@@ -69,10 +76,27 @@ nav{
     object-fit: cover;
     
 }
+#main-card{
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Ysabeau Office', sans-serif;
+    color: white; 
+    font-size: x-large; 
+}
 #aboutUs{
     background-color: rgb(228, 202, 153);
     grid-area: aboutUs;
     border-radius: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+#aboutUs p{
+    font-family: 'M PLUS 1p', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Ysabeau Office', sans-serif;
+    font-family: 'Zilla Slab', serif;
+    font-size: larger;
+    
+    
 }
 #all-images{
     background-color:rgb(244, 215, 162);
@@ -103,13 +127,30 @@ nav{
     
 }
 
+#all-images button{
+padding: 5px;
+border-radius: 15px;
+background-color: rgb(231, 195, 128);
+}
+
 #form{
     background-color: rgb(251, 218, 158);
     grid-area: form;
     border-radius: 20px;
     padding: 20px;
+    color: black;
     
 }
+#form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#form label {
+    display: block;
+    margin-bottom: 0.5px;
+    font-weight: bold;
+}
+
 .card img{
     object-fit: fill;
     height: 20%;

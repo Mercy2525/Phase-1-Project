@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             card.style.display = "none";
           }
         }  
+        
          })
 
    //Add more products
