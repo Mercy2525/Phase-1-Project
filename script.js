@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     .then(data=>console.log(data))
     .catch(error=>console.log(error))
   } 
-}
+ }
 
     //PATCH method to update bought items
  function updateBoughtStock(id, currentStock){
@@ -129,9 +129,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
     .then(response=>response.json())
     .then(data=>console.log(data))
     .catch(error=>console.log(error))
-}
+ }
 
-function deleteItem(id, currentStock){  
+  function deleteItem(id, currentStock){  
     fetch(`https://shop-ig.onrender.com/products/${id}`,{
       method: "DELETE",
       headers: {"Content-Type": "application/json"},
@@ -141,16 +141,6 @@ function deleteItem(id, currentStock){
     .catch(error=>console.log(error))
 }
 
-  
+
 })
 
-// function deleteProduct(id){fetch (${apiUrl}/${id}.......)
-// button.addEventListener("click", ()=>{deleteProduct(id)})
-//Name, Shop IG, taglines- shopping made easier
-//delete sold items/reduce the number of items available 
-//Also, add some form of filtering functionality, either by category or date added. 
-
-//1. Shop-Header-Create a filtering functionality-shoes/clothes(firstDiv in HTML)
-//2. Get request api, and post on DOM
-    //no of items in stock(maybe)-[secondDiv in HTML]
-    //create Div to attach
