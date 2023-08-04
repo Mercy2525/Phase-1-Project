@@ -1,3 +1,7 @@
+*{
+    display: flex;
+    flex-wrap: wrap;
+}
 .container{
     background-color: rgb(236, 235, 233);
     display: grid;
