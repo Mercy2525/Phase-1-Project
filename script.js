@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
   let form= document.getElementById("form")
     
     //GET from API
-  fetch("http://localhost:3000/products")
+  fetch("https://shop-ig.onrender.com/products")
     .then(res=>res.json())
     .then(data=>displayProducts(data))
     .catch(error=>console.log(error))
@@ -66,8 +66,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
             allImages.textContent= ``
           deleteItem(id, currentStock)
           }
-          // allImages.textContent= ``
-          // deleteItem(id, currentStock)
        })
     }
 
@@ -101,7 +99,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     let newStock= document.getElementById("stock").value
     let description=document.getElementById("describe").value
 
-    fetch("http://localhost:3000/products", {
+    fetch("https://shop-ig.onrender.com/products", {
         method: "POST",
         headers:{"Content-Type": "application/json"},
         body:JSON.stringify({
@@ -120,7 +118,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     //PATCH method to update bought items
  function updateBoughtStock(id, currentStock){
-     fetch(`http://localhost:3000/products/${id}`,{
+     fetch(`https://shop-ig.onrender.com/products/${id}`,{
       method: "PATCH",
       headers: {"Content-Type": "application/json"},
       body:JSON.stringify({
@@ -133,7 +131,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 }
 
 function deleteItem(id, currentStock){  
-    fetch(`http://localhost:3000/products/${id}`,{
+    fetch(`https://shop-ig.onrender.com/products/${id}`,{
       method: "DELETE",
       headers: {"Content-Type": "application/json"},
     })

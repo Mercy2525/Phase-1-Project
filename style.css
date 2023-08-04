@@ -5,14 +5,16 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.2fr 0.2fr 0.8fr 1.5fr 0.5fr 0.3fr 0.3fr;
     grid-template-areas: 
-    " header header header header"
-    "main-card main-card main-card main-card"
     "nav nav nav nav"
+    "header header header header"
+    
+    
+    "main-card main-card main-card main-card"
     "aboutUs aboutUs aboutUs aboutUs"
     "all-images all-images all-images all-images"
     "form form form form"
     "footer footer footer footer";
-    grid-gap: 2em;
+    grid-gap: 0.3em;
     font-weight: 800;
     text-transform: uppercase;
     color: black;
