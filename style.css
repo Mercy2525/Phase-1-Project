@@ -17,9 +17,10 @@ body{
     "nav nav nav nav"
     "header header header header"
     "main-card main-card main-card main-card"
-    "aboutUs aboutUs aboutUs aboutUs"
+    "available-products available-products available-products available-products"
     "all-images all-images all-images all-images"
     "form form form form"
+    "aboutUs aboutUs aboutUs aboutUs"
     "footer footer footer footer";
     grid-gap: 0.3em;
     font-weight: 800;
@@ -28,6 +29,14 @@ body{
     text-align: center;
 }
 
+nav{
+    background-color:rgb(246, 199, 112);
+    grid-area: nav;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
 nav a {
     color:rgb(31, 3, 31);
     text-decoration: none;
@@ -46,14 +55,7 @@ header{
 header h1{
     font-family: 'Ysabeau Office', sans-serif;  
 }
-nav{
-    background-color:rgb(246, 199, 112);
-    grid-area: nav;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
+
 
 #main-card{
     background-color:rgb(205, 181, 136);
@@ -63,7 +65,11 @@ nav{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center; 
-    border-radius: 20px;  
+    border-radius: 20px;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Ysabeau Office', sans-serif;
+    color: white; 
+    font-size: x-large;   
     
 }
 #main-card img{
@@ -90,13 +96,26 @@ nav{
 }
 #aboutUs p{
     font-family: 'M PLUS 1p', sans-serif;
-    font-family: 'Noto Sans', sans-serif;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Ysabeau Office', sans-serif;
-    font-family: 'Zilla Slab', serif;
     font-size: larger;
     text-transform:lowercase;
     
+}
+
+.available-products{
+    grid-area: all-images;
+    background-color: rgb(244, 215, 162);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.available-products h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
 }
 #all-images{
     background-color:rgb(244, 215, 162);
@@ -133,6 +152,12 @@ border-radius: 15px;
 background-color: rgb(231, 195, 128);
 }
 
+.card img{
+    object-fit: fill;
+    height: 20%;
+    width: 50%;
+}
+
 #form{
     background-color: rgb(251, 218, 158);
     grid-area: form;
@@ -151,16 +176,46 @@ background-color: rgb(231, 195, 128);
     font-weight: bold;
 }
 
-.card img{
-    object-fit: fill;
-    height: 20%;
-    width: 50%;
-}
-
 #footer{
     background-color:rgb(246, 199, 112);
     grid-area: footer;
     border-radius: 20px;
+}
+
+#form input[type="text"],
+#form input[type="url"],
+#form input[type="number"] {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 15px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#form textarea {
+  width: 80%;
+  height: 80px;
+  padding: 20px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#form input[type="submit"] {
+  background-color: rgb(231, 195, 128);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#form input[type="submit"]:hover {
+  background-color: rgb(205, 181, 136);
 }
 
 @media only screen and(max-width:550px) {

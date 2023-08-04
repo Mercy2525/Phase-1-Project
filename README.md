@@ -17,10 +17,10 @@ The application ensures the DOM has loaded by adding an event listener to the `D
  2. Since the API is rendered, one manny not need to run it locally 
 
 ## Technologies Used
-HTML, CSS, and JavaScript for the frontend interface.
-fetch API to communicate with the external API.
-Backend API (not included) to manage product data.
-Node.js (optional) for setting up a local server during development.
+- HTML, CSS, and JavaScript for the frontend interface.
+- Fetch API to communicate with the external API.
+- Backend API (not included) to manage product data.
+- Node.js (optional) for setting up a local server during development.
 
 ## Features
 

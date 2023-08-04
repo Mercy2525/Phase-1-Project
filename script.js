@@ -1,12 +1,12 @@
-//Ensures DOM has loaded
+//Ensures DOM has loaded fully before executing the code
 document.addEventListener("DOMContentLoaded", ()=>{
-    //get elements from HTML
+    //get elements from HTML document
   let dataList= document.getElementById("datalistOptions")
   let productImages= document.getElementById("all-images")  
   let searchInput=document.querySelector("#search")
   let form= document.getElementById("form")
     
-    //GET from API
+    //Fetch data from APIand display then in the DOM
   fetch("https://shop-ig.onrender.com/products")
     .then(res=>res.json())
     .then(data=>displayProducts(data))
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
   function displayProducts(products){
     for( let product of products){
       const{id,title,price,image,description,stock}=product
-        //search option- display product titles
+        //Add product titles on the search option
         let searchOption=document.createElement("option")
         searchOption.innerHTML=`
         <option value="${title}"> 
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
           }
        })
 
-        //Add click Event listener to delete button
+        //Add click Event listener to delete button for removing products
         let deleteButton=allImages.querySelector(`#deleteProduct${id}`)
         deleteButton.addEventListener("click", ()=>{
          let updateStock=document.querySelector(`#boughtStock${id}`)
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
        })
     }
 
-       //add Input event-listener on search list
+       //Add Input event listener on search list
        searchInput.addEventListener("input", () => {
         let searchTerm = searchInput.value.toLowerCase();
         let cards = document.querySelectorAll(".card");
@@ -81,11 +81,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
             card.style.display = "none";
           }
         }  
-        
+        searchInput.value = ""
          })
 
    //Add more products
-     //1.Submit Event listener to post more Products
+     //1.Submit Event listener to post more Products using POST
   form.addEventListener("submit", function(e){
        e.preventDefault()
         postProducts()
@@ -131,6 +131,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     .catch(error=>console.log(error))
  }
 
+ //DELETE method to delete product when stock is bought out
   function deleteItem(id, currentStock){  
     fetch(`https://shop-ig.onrender.com/products/${id}`,{
       method: "DELETE",
